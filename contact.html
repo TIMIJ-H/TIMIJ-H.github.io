@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — David Adebowale, Data Analyst</title>
+<meta name="description" content="Get in touch with David Adebowale, entry-level Data Analyst and Economics graduate based in Lagos, Nigeria.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .page-head{ padding: 70px 0 10px; }
+  .page-head h1{ font-size: clamp(1.9rem, 4vw, 2.6rem); }
+  .page-head p{ margin-top: 14px; color: var(--muted); font-size: 16.5px; max-width: 54ch; }
+
+  .contact-grid{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; padding: 40px 0 90px; align-items:start; }
+  .contact-card{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-card); padding:32px; }
+
+  .field{ margin-bottom:18px; }
+  .field label{ display:block; font-size:13.5px; font-weight:600; margin-bottom:7px; }
+  .field input, .field textarea{
+    width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:8px;
+    font-family:'Inter',sans-serif; font-size:14.5px; background:var(--bg); color:var(--ink);
+  }
+  .field textarea{ min-height:130px; resize:vertical; }
+  .field input:focus, .field textarea:focus{ outline:2px solid var(--primary); outline-offset:1px; border-color:var(--primary); }
+
+  .direct-list{ display:flex; flex-direction:column; gap:14px; }
+  .direct-item{ display:flex; justify-content:space-between; align-items:center; padding:16px 18px; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+  .direct-item .k{ font-size:13px; color:var(--muted); }
+  .direct-item .v{ font-weight:600; font-size:14.5px; margin-top:2px; }
+  .direct-item .btn{ padding:8px 16px; font-size:13px; }
+
+  .status-note{ margin-top:22px; font-size:13.5px; color:var(--muted); background:var(--signal-soft); border-radius:10px; padding:14px 18px; }
+  .status-note strong{ color:var(--signal); }
+
+  @media (max-width:860px){ .contact-grid{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">David Adebowale</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Let's connect</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="page-head">
+      <h1>Let's connect.</h1>
+      <p>Open to entry-level Data Analyst and Business Analyst roles, internships, and freelance work. Based in Lagos, Nigeria — available to relocate or work remote.</p>
+    </section>
+
+    <section class="contact-grid">
+      <div class="contact-card">
+        <!--
+          NOTE FOR DAVID: this form has no backend yet, so submissions don't go
+          anywhere until it's connected to a form service. Formspree is a free,
+          beginner-friendly option:
+            1. Go to formspree.io and sign up with your email
+            2. Create a new form — it gives you a URL like
+               https://formspree.io/f/abcd1234
+            3. Replace the [ADD FORMSPREE ENDPOINT] below with that URL
+          Until then, use the "Email me directly" button on the right — that
+          one works right now with no setup.
+        -->
+        <form action="[ADD FORMSPREE ENDPOINT]" method="POST">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send message</button>
+        </form>
+      </div>
+
+      <div>
+        <div class="direct-list">
+          <div class="direct-item">
+            <div><div class="k">Email</div><div class="v">davidadebowale113@gmail.com</div></div>
+            <a href="mailto:davidadebowale113@gmail.com" class="btn btn-outline">Email me directly</a>
+          </div>
+          <div class="direct-item">
+            <div><div class="k">Phone</div><div class="v">09122903168</div></div>
+            <a href="tel:09122903168" class="btn btn-outline">Call</a>
+          </div>
+          <div class="direct-item">
+            <div><div class="k">LinkedIn</div><div class="v">David Adebowale</div></div>
+            <a href="https://www.linkedin.com/in/david-adebowale-99b853360" target="_blank" rel="noopener" class="btn btn-outline">View LinkedIn</a>
+          </div>
+          <div class="direct-item">
+            <div><div class="k">GitHub</div><div class="v">[ADD GITHUB LINK]</div></div>
+            <a href="[ADD GITHUB LINK]" class="btn btn-outline">View GitHub</a>
+          </div>
+        </div>
+        <div class="status-note"><strong>Status:</strong> Open to entry-level Data Analyst / Business Analyst roles — usually replies within a day.</div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <h3>David Adebowale</h3>
+      <p>Data Analyst &amp; Economics Graduate based in Lagos, Nigeria.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="[ADD GITHUB LINK]">GitHub</a>
+        <a href="https://www.linkedin.com/in/david-adebowale-99b853360" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:davidadebowale113@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">© 2026 David Adebowale. Built page by page while learning data analytics.</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

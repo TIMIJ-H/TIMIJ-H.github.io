@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — David Adebowale, Data Analyst</title>
+<meta name="description" content="Data analysis projects by David Adebowale covering SQL, Power BI, Python, Excel, and applied econometrics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .page-head{ padding: 70px 0 10px; }
+  .page-head h1{ font-size: clamp(1.9rem, 4vw, 2.6rem); max-width: 18ch; }
+  .page-head p{ margin-top: 14px; color: var(--muted); font-size: 16.5px; max-width: 56ch; }
+
+  .legend{
+    display:flex; gap:22px; flex-wrap:wrap; margin: 26px 0 10px;
+    font-size: 13.5px; color: var(--muted);
+  }
+  .legend span{ display:inline-flex; align-items:center; gap:8px; }
+  .legend .dot{ width:8px; height:8px; border-radius:50%; }
+  .dot-done{ background: var(--signal); }
+  .dot-progress{ background: var(--amber); }
+
+  .project-grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap:22px; padding: 34px 0 20px; }
+  .project-card{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-card); overflow:hidden; display:flex; flex-direction:column; }
+  .p-media{ aspect-ratio:16/9; background:var(--bg); border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:center; color:var(--faint); }
+  .p-media svg{ width:32px; height:32px; opacity:.6; }
+  .p-body{ padding:24px; display:flex; flex-direction:column; flex:1; }
+  .p-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:10px; }
+  .p-title{ font-size:18px; font-weight:600; max-width:28ch; }
+  .p-desc{ margin-top:10px; color:var(--muted); font-size:14.5px; }
+  .p-field{ margin-top:14px; font-size:13.5px; }
+  .p-field .lbl{ color:var(--faint); font-weight:600; font-size:11.5px; text-transform:uppercase; letter-spacing:0.03em; }
+  .p-field .val{ margin-top:3px; color:var(--ink); }
+  .p-field .val.placeholder-text{ color:var(--faint); font-style:italic; }
+  .p-tags{ display:flex; flex-wrap:wrap; gap:6px; margin-top:16px; }
+  .p-tag{ font-family:'IBM Plex Mono',monospace; font-size:11px; padding:4px 9px; border:1px solid var(--line); border-radius:12px; color:var(--muted); }
+  .p-cta{ margin-top:20px; }
+
+  @media (max-width:860px){ .project-grid{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">David Adebowale</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Let's connect</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="page-head">
+      <h1>Projects.</h1>
+      <p>A mix of completed research and hands-on practice projects, each built to demonstrate a specific analytics skill. Every card is labeled honestly — completed work shows real, verified results; practice projects are marked until real data and findings are added.</p>
+      <div class="legend">
+        <span><span class="dot dot-done"></span>Completed — results are real and verified</span>
+        <span><span class="dot dot-progress"></span>Example project — dataset/results pending</span>
+      </div>
+    </section>
+
+    <section class="project-grid" style="padding-top:10px;">
+
+      <!-- PROJECT 1: Real, completed -->
+      <div class="project-card">
+        <div class="p-media">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 17l5-5 4 4 8-9"/><path d="M3 21h18"/></svg>
+        </div>
+        <div class="p-body">
+          <div class="p-top">
+            <div class="p-title">Exchange Rate Fluctuation and Economic Growth in Nigeria</div>
+            <span class="tag tag-done">Completed</span>
+          </div>
+          <p class="p-desc">An ARDL bounds-testing study of how currency depreciation, inflation, and interest rates affect Nigeria's GDP growth using 44 years of macroeconomic data (1980–2024).</p>
+          <div class="p-field"><div class="lbl">Business problem</div><div class="val">Understanding what drives Nigeria's economic growth amid persistent currency depreciation.</div></div>
+          <div class="p-field"><div class="lbl">Key result</div><div class="val">Exchange rate depreciation, inflation, and high lending rates significantly reduce GDP growth (model R² = 0.87).</div></div>
+          <div class="p-tags"><span class="p-tag">Econometrics</span><span class="p-tag">ARDL</span><span class="p-tag">ECM</span></div>
+          <div class="p-cta"><a href="projects/exchange-rate-ardl.html" class="btn btn-outline">View project</a></div>
+        </div>
+      </div>
+
+      <!-- PROJECT 2: SQL -->
+      <div class="project-card">
+        <div class="p-media">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
+        </div>
+        <div class="p-body">
+          <div class="p-top">
+            <div class="p-title">Digital Music Store Sales Analysis Using SQL</div>
+            <span class="tag tag-progress">Example project</span>
+          </div>
+          <p class="p-desc">A practice project analyzing genre, artist, and country-level sales performance using SQL queries on a digital music store database.</p>
+          <div class="p-field"><div class="lbl">Business problem</div><div class="val">Store managers need to know which genres, artists, and countries drive the most revenue, and who the highest-value customers are.</div></div>
+          <div class="p-field"><div class="lbl">Key result</div><div class="val placeholder-text">[PLACEHOLDER — to be added once the dataset is analyzed]</div></div>
+          <div class="p-tags"><span class="p-tag">SQL</span></div>
+          <div class="p-cta"><a href="projects/music-store-sql.html" class="btn btn-outline">View project</a></div>
+        </div>
+      </div>
+
+      <!-- PROJECT 3: Power BI -->
+      <div class="project-card">
+        <div class="p-media">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 16v-4M12 16V8M16 16v-7"/></svg>
+        </div>
+        <div class="p-body">
+          <div class="p-top">
+            <div class="p-title">Sales &amp; Performance Analytics Dashboard</div>
+            <span class="tag tag-progress">Example project</span>
+          </div>
+          <p class="p-desc">An interactive Power BI dashboard covering revenue, sales, customers, products, and regional performance trends.</p>
+          <div class="p-field"><div class="lbl">Business problem</div><div class="val">Leadership lacked a single view of revenue, sales, and customer performance across regions.</div></div>
+          <div class="p-field"><div class="lbl">Key result</div><div class="val placeholder-text">[PLACEHOLDER — to be added once the dataset is analyzed]</div></div>
+          <div class="p-tags"><span class="p-tag">Power BI</span><span class="p-tag">DAX</span><span class="p-tag">Power Query</span></div>
+          <div class="p-cta"><a href="projects/sales-dashboard-powerbi.html" class="btn btn-outline">View project</a></div>
+        </div>
+      </div>
+
+      <!-- PROJECT 4: Python -->
+      <div class="project-card">
+        <div class="p-media">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 6L3 12l5 6M16 6l5 6-5 6"/></svg>
+        </div>
+        <div class="p-body">
+          <div class="p-top">
+            <div class="p-title">Customer Analytics Using Python</div>
+            <span class="tag tag-done">Completed</span>
+          </div>
+          <p class="p-desc">RFM segmentation and sales analysis of 9,994 retail orders using Python, Pandas, and Matplotlib.</p>
+          <div class="p-field"><div class="lbl">Business problem</div><div class="val">The business couldn't tell which customers actually drove revenue versus which were low-value or at risk of churning.</div></div>
+          <div class="p-field"><div class="lbl">Key result</div><div class="val">"Champions" are just 24% of customers but generate ~40% of revenue; two product sub-categories were found to be net-unprofitable despite steady sales.</div></div>
+          <div class="p-tags"><span class="p-tag">Python</span><span class="p-tag">Pandas</span><span class="p-tag">RFM</span></div>
+          <div class="p-cta"><a href="projects/customer-analytics-python.html" class="btn btn-outline">View project</a></div>
+        </div>
+      </div>
+
+      <!-- PROJECT 5: Excel -->
+      <div class="project-card">
+        <div class="p-media">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M10 4v16"/></svg>
+        </div>
+        <div class="p-body">
+          <div class="p-top">
+            <div class="p-title">Business Sales Performance Analysis Using Excel</div>
+            <span class="tag tag-progress">Example project</span>
+          </div>
+          <p class="p-desc">A sales performance analysis built with Pivot Tables, XLOOKUP, and SUMIFS, with a dashboard summary view.</p>
+          <div class="p-field"><div class="lbl">Business problem</div><div class="val">Sales performance needed clearer tracking and reporting across products and regions.</div></div>
+          <div class="p-field"><div class="lbl">Key result</div><div class="val placeholder-text">[PLACEHOLDER — to be added once the dataset is analyzed]</div></div>
+          <div class="p-tags"><span class="p-tag">Excel</span><span class="p-tag">Pivot Tables</span><span class="p-tag">XLOOKUP</span></div>
+          <div class="p-cta"><a href="projects/sales-performance-excel.html" class="btn btn-outline">View project</a></div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <h3>David Adebowale</h3>
+      <p>Data Analyst &amp; Economics Graduate based in Lagos, Nigeria.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="[ADD GITHUB LINK]">GitHub</a>
+        <a href="https://www.linkedin.com/in/david-adebowale-99b853360" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:davidadebowale113@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">© 2026 David Adebowale. Built page by page while learning data analytics.</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

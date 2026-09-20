@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exchange Rate Fluctuation and Economic Growth in Nigeria — Case Study</title>
+<meta name="description" content="ARDL bounds-testing analysis of how exchange rate, inflation, and interest rates affect Nigeria's GDP growth, 1980–2024.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">David Adebowale</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../skills.html">Skills</a></li>
+      <li><a href="../projects.html" class="active">Projects</a></li>
+      <li><a href="../experience.html">Experience</a></li>
+      <li><a href="../resume.html">Resume</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+    <a href="../contact.html" class="nav-cta">Let's connect</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="cs-hero">
+      <a href="../projects.html" class="cs-back">← Back to projects</a>
+      <h1>Exchange Rate Fluctuation and Economic Growth in Nigeria</h1>
+      <p class="subtitle">An ARDL bounds-testing study of how currency depreciation, inflation, and interest rates affect Nigeria's economic growth, using 44 years of macroeconomic data.</p>
+    </section>
+
+    <section class="cs-meta">
+      <div class="cs-meta-row"><span class="k">Period covered</span><span class="v">1980 – 2024</span></div>
+      <div class="cs-meta-row"><span class="k">Project type</span><span class="v">Academic research / econometrics</span></div>
+      <div class="cs-meta-row"><span class="k">Status</span><span class="v">Completed</span></div>
+      <div class="cs-meta-row"><span class="k">Method</span><span class="v">ARDL Bounds Testing + Error Correction Model</span></div>
+      <div class="cs-meta-row"><span class="k">Full project files</span><span class="v">[ADD LINK TO FULL THESIS PDF, IF SHARING]</span></div>
+    </section>
+
+    <div class="cs-metric-row">
+      <div class="cs-metric"><div class="m-val">0.87</div><div class="m-lbl">R-SQUARED</div></div>
+      <div class="cs-metric"><div class="m-val">6.52</div><div class="m-lbl">F-STATISTIC</div></div>
+      <div class="cs-metric"><div class="m-val">60.3%</div><div class="m-lbl">SPEED OF ADJUSTMENT</div></div>
+      <div class="cs-metric"><div class="m-val">44 yrs</div><div class="m-lbl">DATA COVERED</div></div>
+    </div>
+
+    <article class="cs-body">
+      <h2>Project overview</h2>
+      <p>This study examined the effect of exchange rate fluctuations on economic growth in Nigeria for the period 1980 to 2024, using annual time series data on six macroeconomic variables: GDP growth rate, exchange rate, inflation rate, lending interest rate, crude oil price, and trade openness.</p>
+
+      <h2>Business problem</h2>
+      <p>Nigeria's naira has depreciated persistently and, at times, sharply — from roughly ₦0.55 per US dollar in 1980 to ₦1,460 per US dollar in 2024. Policymakers and businesses need to understand whether — and how strongly — this depreciation actually affects economic growth, rather than assuming a relationship.</p>
+
+      <h2>Research questions</h2>
+      <ul>
+        <li>Does exchange rate depreciation have a statistically significant effect on Nigeria's GDP growth, in the short run and long run?</li>
+        <li>How do inflation and lending interest rates interact with exchange rate movements to affect growth?</li>
+        <li>Do crude oil prices and trade openness offset or reinforce these effects?</li>
+        <li>How quickly does the Nigerian economy return to equilibrium after a shock?</li>
+      </ul>
+
+      <h2>Data sources</h2>
+      <ul>
+        <li>World Bank World Development Indicators (WDI)</li>
+        <li>Central Bank of Nigeria (CBN) Statistical Bulletin</li>
+        <li>IMF / U.S. Energy Information Administration (EIA)</li>
+      </ul>
+
+      <h2>Tools &amp; method</h2>
+      <p>Annual time series data (1980–2024) on GDP growth rate, exchange rate, inflation rate, lending interest rate, crude oil price, and trade openness. Stationarity was tested using the Augmented Dickey-Fuller (ADF) test, followed by ARDL bounds testing (Pesaran, Shin &amp; Smith, 2001) and an Error Correction Model (ECM).</p>
+
+      <h2>Data preparation</h2>
+      <p>The ADF unit root test showed that exchange rate and lending interest rate were stationary at level (I(0)), while GDP growth, inflation, oil price, and trade openness were stationary after first differencing (I(1)). No variable was integrated of order 2, satisfying the key precondition for using the ARDL approach.</p>
+
+      <h2>Analysis</h2>
+      <p>The ARDL bounds test produced an F-statistic of 6.52, exceeding the upper critical bound of 4.85 at the 5% significance level — confirming a stable long-run relationship between the variables. The model's R-squared of 0.87 indicates that approximately 87% of the variation in Nigeria's GDP growth is explained by the model. All six diagnostic tests confirmed the model's validity, stability, and reliability.</p>
+
+      <h2>Key findings</h2>
+      <div class="cs-finding"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Exchange rate depreciation has a significant negative effect on GDP growth, both in the short run and long run — a 100-unit naira depreciation reduces GDP growth by roughly 0.42 percentage points.</span></div>
+      <div class="cs-finding"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Inflation has a significant negative long-run effect — a 1 percentage point rise in inflation reduces GDP growth by about 0.11 percentage points.</span></div>
+      <div class="cs-finding"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>High lending interest rates significantly reduce growth, reflecting a crowding-out effect on private investment.</span></div>
+      <div class="cs-finding"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Crude oil prices have a significant positive effect on growth, confirming Nigeria's continued dependence on oil revenues.</span></div>
+      <div class="cs-finding"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Trade openness has a positive effect on growth, significant at the 10% level.</span></div>
+      <div class="cs-finding"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>The error correction term (−0.60) shows that about 60% of any deviation from long-run equilibrium is corrected within a year — a moderately fast speed of adjustment.</span></div>
+
+      <h2>Business impact</h2>
+      <p>The findings give policymakers and analysts an evidence-based view of which macroeconomic levers matter most for growth — showing that exchange rate stability, inflation control, and interest rate moderation are not just theoretical concerns but measurable drivers of Nigeria's GDP performance.</p>
+
+      <h2>Recommendations</h2>
+      <div class="cs-rec-group">
+        <h3>Exchange rate stabilization</h3>
+        <ul><li>Pursue a transparent, market-consistent exchange rate framework supported by stronger foreign exchange reserves and non-oil export earnings.</li></ul>
+      </div>
+      <div class="cs-rec-group">
+        <h3>Inflation &amp; interest rate management</h3>
+        <ul><li>Maintain disciplined monetary policy and pursue progressive interest rate reductions through credit and collateral reform.</li></ul>
+      </div>
+      <div class="cs-rec-group">
+        <h3>Economic diversification</h3>
+        <ul><li>Reduce reliance on crude oil revenue through targeted investment in agriculture, manufacturing, and services.</li></ul>
+      </div>
+      <div class="cs-rec-group">
+        <h3>Trade policy</h3>
+        <ul><li>Accelerate AfCFTA implementation and reduce non-tariff barriers to broaden non-oil export earnings.</li></ul>
+      </div>
+
+      <h2>Project outcome</h2>
+      <p>The study confirmed a stable, statistically significant long-run relationship between exchange rate movements and Nigeria's economic growth, and translated that relationship into a concrete set of policy recommendations grounded in the data rather than assumption.</p>
+
+      <h2>Full documentation</h2>
+      <div class="cs-placeholder-note">[ADD LINK] — full thesis PDF or a formatted write-up can be linked here if you'd like to share it publicly.</div>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <h3>David Adebowale</h3>
+      <p>Data Analyst &amp; Economics Graduate based in Lagos, Nigeria.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="../about.html">About</a>
+        <a href="../skills.html">Skills</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../resume.html">Resume</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="[ADD GITHUB LINK]">GitHub</a>
+        <a href="https://www.linkedin.com/in/david-adebowale-99b853360" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:davidadebowale113@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">© 2026 David Adebowale. Built page by page while learning data analytics.</div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

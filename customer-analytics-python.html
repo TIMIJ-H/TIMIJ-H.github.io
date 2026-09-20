@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Analytics Using Python — Case Study</title>
+<meta name="description" content="RFM customer segmentation and sales analysis of a 9,994-order retail dataset using Python, Pandas, and Matplotlib.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">David Adebowale</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../skills.html">Skills</a></li>
+      <li><a href="../projects.html" class="active">Projects</a></li>
+      <li><a href="../experience.html">Experience</a></li>
+      <li><a href="../resume.html">Resume</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+    <a href="../contact.html" class="nav-cta">Let's connect</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="cs-hero">
+      <a href="../projects.html" class="cs-back">← Back to projects</a>
+      <h1>Customer Analytics Using Python</h1>
+      <p class="subtitle">Cleaning, exploring, and segmenting 9,994 retail orders with Python and Pandas to find out which customers actually drive revenue.</p>
+    </section>
+
+    <section class="cs-meta">
+      <div class="cs-meta-row"><span class="k">Dataset</span><span class="v">Sample Superstore (public retail dataset)</span></div>
+      <div class="cs-meta-row"><span class="k">Period covered</span><span class="v">Jan 2014 – Dec 2017</span></div>
+      <div class="cs-meta-row"><span class="k">Status</span><span class="v">Completed</span></div>
+      <div class="cs-meta-row"><span class="k">Tools</span><span class="v">Python, Pandas, Matplotlib</span></div>
+      <div class="cs-meta-row"><span class="k">GitHub repository</span><span class="v">[ADD GITHUB LINK]</span></div>
+      <div class="cs-meta-row"><span class="k">Download project files</span><span class="v"><a href="../assets/downloads/customer_analytics.py">Python script</a> · <a href="../assets/downloads/rfm_table.csv">RFM results (CSV)</a></span></div>
+    </section>
+
+    <div class="cs-metric-row">
+      <div class="cs-metric"><div class="m-val">$2.30M</div><div class="m-lbl">TOTAL SALES</div></div>
+      <div class="cs-metric"><div class="m-val">793</div><div class="m-lbl">UNIQUE CUSTOMERS</div></div>
+      <div class="cs-metric"><div class="m-val">5,009</div><div class="m-lbl">ORDERS</div></div>
+      <div class="cs-metric"><div class="m-val">$459</div><div class="m-lbl">AVG ORDER VALUE</div></div>
+    </div>
+
+    <article class="cs-body">
+      <h2>Project overview</h2>
+      <p>This project analyzes 9,994 order line items from a US-based retail superstore (2014–2017) to understand sales patterns and identify which customers are most valuable, using Python for cleaning, exploration, and RFM (Recency, Frequency, Monetary) customer segmentation.</p>
+
+      <h2>Business problem</h2>
+      <p>Retail businesses often treat all customers the same, spending equally on retention and marketing across the board. Without knowing which customers are genuinely high-value versus which are drifting away, marketing budget gets wasted and at-risk high-value customers get missed.</p>
+
+      <h2>Business questions</h2>
+      <ul>
+        <li>Which product categories and sub-categories actually drive sales — and which drive profit?</li>
+        <li>Are there sub-categories that sell well but lose money?</li>
+        <li>How does revenue trend month to month — is there seasonality?</li>
+        <li>Which customers are the most valuable, and which are at risk of churning?</li>
+      </ul>
+
+      <h2>Dataset overview</h2>
+      <p>9,994 rows across 21 columns, covering order details, customer info, product category, region, sales, and profit for 793 unique customers and 1,850 unique products across 49 US states.</p>
+
+      <h2>Data cleaning</h2>
+      <p>Checked for missing values (none found) and duplicate rows (none found). Converted order and ship dates from text into proper date format so they could be used for time-based analysis and the recency calculation in RFM.</p>
+
+      <h2>Analysis performed</h2>
+      <h3>1. Sales &amp; profit by category</h3>
+      <div class="cs-chart">
+        <img src="../assets/img/customer-analytics/chart_category_sales.png" alt="Bar chart of total sales by product category: Technology, Furniture, Office Supplies">
+        <div class="cs-chart-cap">Technology leads in total sales, narrowly ahead of Furniture and Office Supplies.</div>
+      </div>
+
+      <h3>2. Monthly sales trend</h3>
+      <div class="cs-chart">
+        <img src="../assets/img/customer-analytics/chart_monthly_trend.png" alt="Line chart of monthly sales from 2014 to 2017 showing a rising trend with seasonal spikes">
+        <div class="cs-chart-cap">Sales spike sharply every November/December and trend upward year over year overall.</div>
+      </div>
+
+      <h3>3. Most and least profitable sub-categories</h3>
+      <div class="cs-chart">
+        <img src="../assets/img/customer-analytics/chart_subcategory_profit.png" alt="Bar chart comparing the most and least profitable product sub-categories, with Tables and Bookcases showing negative profit">
+        <div class="cs-chart-cap">Copiers, Phones, and Accessories are the most profitable. Tables and Bookcases actually lose money overall, despite generating sales.</div>
+      </div>
+
+      <h3>4. RFM customer segmentation</h3>
+      <p>Each of the 793 customers was scored on Recency (days since last order), Frequency (number of orders), and Monetary value (total spend), then grouped into five segments.</p>
+      <div class="cs-chart">
+        <img src="../assets/img/customer-analytics/chart_rfm_segments.png" alt="Bar chart showing customer counts across five RFM segments: Champions, Loyal Customers, Potential Loyalists, At Risk, and Lost or Low Value">
+        <div class="cs-chart-cap">Distribution of all 793 customers across the five RFM segments.</div>
+      </div>
+
+      <h2>Key findings</h2>
+      <div class="cs-finding"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>"Champions" are only 24% of customers (193 of 793) but generate $921,597 — roughly 40% of total revenue.</span></div>
+      <div class="cs-finding"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>141 customers are "At Risk" (recently active but declining) and 55 are "Lost / Low Value" — together nearly 25% of the customer base, worth targeting before they're gone for good.</span></div>
+      <div class="cs-finding"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Tables and Bookcases are sold regularly but are net-negative on profit — likely due to steep discounting eating into margin.</span></div>
+      <div class="cs-finding"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Sales are strongly seasonal, spiking every November-December — useful for inventory and staffing planning.</span></div>
+
+      <h2>Business impact</h2>
+      <p>These findings let a business focus retention spend on the 24% of customers who generate the majority of revenue, flag at-risk high-value customers before they churn, and reconsider pricing or discount policy on chronically unprofitable products.</p>
+
+      <h2>Recommendations</h2>
+      <div class="cs-rec-group">
+        <h3>Customer retention</h3>
+        <ul><li>Build a loyalty or early-access program targeted specifically at "Champions" and "Loyal Customers" to protect the ~65% of revenue they generate.</li></ul>
+      </div>
+      <div class="cs-rec-group">
+        <h3>Win-back campaigns</h3>
+        <ul><li>Target the 141 "At Risk" customers with a re-engagement offer before they move into the "Lost" segment.</li></ul>
+      </div>
+      <div class="cs-rec-group">
+        <h3>Pricing review</h3>
+        <ul><li>Review discounting practices on Tables and Bookcases specifically — they may need a minimum-margin floor on discounts.</li></ul>
+      </div>
+      <div class="cs-rec-group">
+        <h3>Inventory planning</h3>
+        <ul><li>Plan stock and staffing increases ahead of the recurring November-December demand spike.</li></ul>
+      </div>
+
+      <h2>Project outcome</h2>
+      <p>Turned a raw, uncategorized transaction log into a segmented view of exactly which customers and products matter most — the kind of analysis a retail business could act on directly.</p>
+
+      <h2>How to reproduce this</h2>
+      <p>The full Python script is available to download below. It uses only Pandas and Matplotlib — no advanced libraries required. The core technique (RFM scoring with <code>pd.qcut</code> to split customers into quartiles) is a standard, widely-used approach for customer segmentation and works on any dataset with a customer ID, an order date, and an order value.</p>
+      <div class="cs-download-row">
+        <a href="../assets/downloads/customer_analytics.py" class="btn btn-outline">Download Python script</a>
+        <a href="../assets/downloads/rfm_table.csv" class="btn btn-outline">Download RFM results (CSV)</a>
+      </div>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <h3>David Adebowale</h3>
+      <p>Data Analyst &amp; Economics Graduate based in Lagos, Nigeria.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="../about.html">About</a>
+        <a href="../skills.html">Skills</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../resume.html">Resume</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="[ADD GITHUB LINK]">GitHub</a>
+        <a href="https://www.linkedin.com/in/david-adebowale-99b853360" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:davidadebowale113@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">© 2026 David Adebowale. Built page by page while learning data analytics.</div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

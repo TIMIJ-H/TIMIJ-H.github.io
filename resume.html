@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume — David Adebowale, Data Analyst</title>
+<meta name="description" content="Resume of David Adebowale, entry-level Data Analyst and Economics graduate, skilled in SQL, Power BI, Python, and Excel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .resume-head{ padding:70px 0 10px; display:flex; justify-content:space-between; align-items:flex-end; gap:30px; flex-wrap:wrap; }
+  .resume-head h1{ font-size: clamp(1.9rem, 4vw, 2.6rem); }
+  .resume-head p{ margin-top:10px; color:var(--muted); font-size:16px; }
+
+  .resume-card{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-card); padding:40px; margin:36px 0 60px; }
+  .r-section{ margin-bottom:34px; }
+  .r-section:last-child{ margin-bottom:0; }
+  .r-section h2{ font-size:13px; text-transform:uppercase; letter-spacing:0.06em; color:var(--primary); padding-bottom:10px; border-bottom:1px solid var(--line); margin-bottom:16px; }
+  .r-section p{ color:var(--ink); font-size:15px; }
+
+  .r-entry{ margin-bottom:18px; }
+  .r-entry:last-child{ margin-bottom:0; }
+  .r-entry-top{ display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+  .r-entry-title{ font-weight:600; font-size:15.5px; }
+  .r-entry-org{ color:var(--muted); font-size:14px; margin-top:2px; }
+  .r-entry-date{ font-size:13px; color:var(--faint); white-space:nowrap; }
+  .r-entry ul{ margin:10px 0 0; padding-left:18px; font-size:14.5px; color:var(--muted); }
+  .r-entry li{ margin-bottom:5px; }
+
+  .r-chip-row{ display:flex; flex-wrap:wrap; gap:8px; }
+  .r-chip{ font-family:'IBM Plex Mono',monospace; font-size:12px; padding:6px 11px; border-radius:14px; background:var(--bg); border:1px solid var(--line); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">David Adebowale</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="resume.html" class="active">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Let's connect</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="resume-head">
+      <div>
+        <h1>Resume.</h1>
+        <p>The short version — full detail is on the About, Skills, and Experience pages.</p>
+      </div>
+      <a href="assets/Adebowale_David_CV.pdf" class="btn btn-primary" target="_blank">Download resume (PDF)</a>
+    </section>
+
+    <div class="resume-card">
+
+      <div class="r-section">
+        <h2>Profile</h2>
+        <p>Data Analyst and Economics graduate (Crawford University) with hands-on training in Python, SQL, Power BI, and Advanced Excel, combined with a strong foundation in applied econometrics. Completed an ARDL-based research project analyzing exchange rate dynamics and economic growth in Nigeria, and gained practical experience in financial administration and inventory operations through leadership roles in a student economics association. Seeking entry-level Data Analyst opportunities where analytical rigor and clear reporting drive better decisions.</p>
+      </div>
+
+      <div class="r-section">
+        <h2>Education</h2>
+        <div class="r-entry">
+          <div class="r-entry-top">
+            <div>
+              <div class="r-entry-title">B.Sc. Economics (Econometrics &amp; Statistics Focus)</div>
+              <div class="r-entry-org">Crawford University</div>
+            </div>
+            <div class="r-entry-date">Expected 2026</div>
+          </div>
+          <p style="margin-top:8px; font-size:14px; color:var(--muted);">Second Class Upper Division (2:1). Coursework: Econometrics &amp; Statistics, Microeconomics, Macroeconomics, Public Finance, International Economics, Development Economics, Research Methods.</p>
+        </div>
+      </div>
+
+      <div class="r-section">
+        <h2>Technical Skills</h2>
+        <div class="r-chip-row">
+          <span class="r-chip">SQL</span>
+          <span class="r-chip">Python (Pandas, NumPy)</span>
+          <span class="r-chip">Power BI &amp; DAX</span>
+          <span class="r-chip">Advanced Excel</span>
+          <span class="r-chip">Econometric Analysis (ARDL/ECM)</span>
+          <span class="r-chip">Data Cleaning &amp; EDA</span>
+        </div>
+      </div>
+
+      <div class="r-section">
+        <h2>Projects</h2>
+        <div class="r-entry">
+          <div class="r-entry-title">Exchange Rate Fluctuation and Economic Growth in Nigeria (1980–2024)</div>
+          <p style="margin-top:6px; font-size:14px; color:var(--muted);">ARDL bounds testing and ECM analysis showing exchange rate depreciation, inflation, and high lending rates significantly reduce GDP growth (R² = 0.87).</p>
+        </div>
+        <p style="margin-top:14px;"><a href="projects.html" style="color:var(--primary); text-decoration:underline; font-size:14px;">See all projects, including in-progress SQL, Power BI, Python, and Excel work →</a></p>
+      </div>
+
+      <div class="r-section">
+        <h2>Experience</h2>
+        <div class="r-entry">
+          <div class="r-entry-top">
+            <div>
+              <div class="r-entry-title">Financial Secretary</div>
+              <div class="r-entry-org">Nigerian Economics Students Association (NESA), Crawford University</div>
+            </div>
+            <div class="r-entry-date">2024 – 2025</div>
+          </div>
+          <ul>
+            <li>Managed dues, records, and financial transactions for an association of 150+ members.</li>
+            <li>Ran budgeting and internal audits; presented financial reports to the executive team.</li>
+          </ul>
+        </div>
+        <div class="r-entry">
+          <div class="r-entry-top">
+            <div>
+              <div class="r-entry-title">IT Student (Inventory Support)</div>
+              <div class="r-entry-org">Cway</div>
+            </div>
+            <div class="r-entry-date">July 2025</div>
+          </div>
+          <ul>
+            <li>Tracked and reconciled inventory records for 150+ items using Excel and an internal system.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="r-section">
+        <h2>Certifications</h2>
+        <ul style="padding-left:18px; font-size:14.5px; color:var(--muted);">
+          <li>Certificate of Training — Graduate Finishing Program (2025)</li>
+          <li>Certificate of Membership (Associate Member) — Nigerian Economic Society (NESA)</li>
+          <li>Certificate of Attendance — 8th International Learned Conference: "Poverty, Instability, and Monetary Policy Intervention in a Democratic System"</li>
+          <li>Jobberman — Build Career for Workplace Success</li>
+        </ul>
+      </div>
+
+      <div class="r-section">
+        <h2>Achievements</h2>
+        <ul style="padding-left:18px; font-size:14.5px; color:var(--muted);">
+          <li>Award for Selfless Service and Commitment as Financial Secretary, NESA</li>
+          <li>Award for Selfless Service as Public Relations Officer (PRO), NESA</li>
+        </ul>
+      </div>
+
+      <div class="r-section">
+        <h2>Contact</h2>
+        <p style="font-size:14.5px;">Lagos, Nigeria &nbsp;•&nbsp; 09122903168 &nbsp;•&nbsp; <a href="mailto:davidadebowale113@gmail.com" style="color:var(--primary); text-decoration:underline;">davidadebowale113@gmail.com</a> &nbsp;•&nbsp; <a href="https://www.linkedin.com/in/david-adebowale-99b853360" target="_blank" style="color:var(--primary); text-decoration:underline;">LinkedIn</a></p>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <h3>David Adebowale</h3>
+      <p>Data Analyst &amp; Economics Graduate based in Lagos, Nigeria.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="[ADD GITHUB LINK]">GitHub</a>
+        <a href="https://www.linkedin.com/in/david-adebowale-99b853360" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:davidadebowale113@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">© 2026 David Adebowale. Built page by page while learning data analytics.</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
